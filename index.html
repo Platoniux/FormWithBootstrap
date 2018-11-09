@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
+  <title>Personal Information</title>
+  <style>
+    .icon {
+      font-size: 35px;
+    }
+  </style>
+</head>
+<body class="bg-light">
+  <div class="row justify-content-center no-gutters py-5">
+    <div class="col-1 text-right pr-1">
+      <span class="icon">
+        <i class="fas fa-info-circle"></i>
+      </span>
+    </div>
+    <div class="col-auto">
+      <h1>
+        Personal Information
+      </h1>
+    </div>
+  </div>
+  <div class="container">
+    <form action="https://mate-academy-form-lesson.herokuapp.com/create-application" method="POST">
+      <div class="row">
+        <fieldset class="col-lg-8"> <!-- col-12 -->
+          <legend>
+            <h4>
+              Personal Information
+            </h4>
+          </legend>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label for="surname">
+                  Surname: 
+                </label>
+                <input class="form-control" id="surname" type="text" name="surname" form="personinfo" autocomplete="off" required>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label for="persname">
+                  Name: 
+                </label>
+                <input class="form-control" id="persname" type="text" name="persname" form="personinfo" required>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label for="age">
+                  How old are you?: 
+                </label>
+                <input class="form-control" id="age" type="number" name="age" form="personinfo" min="17">
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label for="birth">
+                  Full date of birth: 
+                </label>
+                <input class="form-control" id="birth" type="date" name="birth" form="personinfo" max='2001-01-01'>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <div class="form-check">
+                <input class="form-check-input" id="accept" type="checkbox" name="accept" form="personinfo">
+                <label class="form-check-label" for="accept">
+                  I accept the terms of the agreement 
+                </label>
+            </div>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="col-lg-4"> <!-- col-12 -->
+          <legend>
+            <h4>
+              Registration
+            </h4>
+          </legend>
+          <div class="form-group">
+            <label for="email">
+              Email: 
+            </label>
+            <input class="form-control" id="email" type="email" name="email" form="personinfo" minlength="5" placeholder="E-mail">
+          </div>
+          <div class="form-group">
+            <label for="passw">
+              Password: 
+            </label>
+            <input class="form-control" id="passw" type="password" name="passw" form="personinfo" maxlength="15">
+          </div>
+          <!-- <div class="row justify-content-end">
+            <div class="col-auto">
+              <button class="btn btn-outline-success btn-sm" type="submit">Submit</button>
+            </div>
+          </div> -->
+        </fieldset>
+      </div>
+      <div class="row">
+        <div class="col">
+          <fieldset class="form-group">
+            <legend>
+              <h4>
+                An interesting fact about you
+              </h4>
+            </legend>
+            <div class="row">
+              <div class="col-lg">
+                <div class="form-group">
+                  <h6>
+                    Do you love cats?
+                  </h6>
+                  <div class="form-check">
+                    <input class="form-check-input" id="lovecats" type="radio" name="lovecats" form="personinfo" value="yes">
+                    <label class="form-check-label" for="lovecats">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" id="dontlovecats" type="radio" name="lovecats" form="personinfo" value="no">
+                    <label class="form-check-label" for="dontlovecats">
+                      No
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg">
+                <div class="form-group">
+                  <label for="color">
+                    What is your favorite color?
+                  </label>
+                  <input class="form-control" id="color" type="color" name="color" form="personinfo">
+                </div>
+              </div>
+              <div class="col-lg">
+                <div class="form-group">
+                  <label for="timeforsleep">
+                    What time do you go to bed?
+                  </label>
+                  <input class="form-control" id='timeforsleep' type="time" name="time" form="personinfo">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg">
+                <div class="form-group">
+                  <label for="brandofcar">
+                    What your favorite brand of cars?
+                  </label>
+                  <select class="form-control" id="brandofcar" name="brandofcar" size="4">
+                    <option>
+                      BMW
+                    </option>
+                    <option>
+                      Audi
+                    </option>
+                    <option selected>
+                      Lada
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-lg">
+                <div class="form-group">
+                  <label for="rate">
+                    How do you rate our work?
+                  </label>
+                  <input class="form-control" id='rate' type="range" name="rate" form="personinfo">
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 offset-sm-3 offset-lg-2">
+          <fieldset class="form-group">
+            <legend>
+              <h6>
+                Your comments
+              </h6>
+            </legend>
+            <textarea class="form-control" name="comments" placeholder="Comments"></textarea>
+          </fieldset>
+        </div>
+      </div>
+      <div class="row justify-content-end">
+        <div class="col-sm-2">
+          <button class="btn btn-outline-success btn-block mb-3" type="submit">Submit</button>
+        </div>
+        <div class="col-sm-2">
+          <button class="btn btn-outline-secondary btn-block" type="reset">Reset</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
