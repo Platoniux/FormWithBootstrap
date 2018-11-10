@@ -26,9 +26,9 @@
     </div>
   </div>
   <div class="container">
-    <form action="https://mate-academy-form-lesson.herokuapp.com/create-application" method="POST">
+    <form action="https://mate-academy-form-lesson.herokuapp.com/create-application" method="POST" name="personinfo">
       <div class="row">
-        <fieldset class="col-lg-8"> <!-- col-12 -->
+        <fieldset class="col-lg-8"> 
           <legend>
             <h4>
               Personal Information
@@ -81,7 +81,7 @@
             </div>
           </div>
         </fieldset>
-        <fieldset class="col-lg-4"> <!-- col-12 -->
+        <fieldset class="col-lg-4"> 
           <legend>
             <h4>
               Registration
@@ -196,10 +196,14 @@
       </div>
       <div class="row justify-content-end">
         <div class="col-sm-2">
-          <button class="btn btn-outline-success btn-block mb-3" type="submit">Submit</button>
+          <input class="btn btn-outline-success btn-block mb-3" type="submit" value="Submit" name="submit" form="personinfo">
+<!--             Submit
+          </button> -->
         </div>
         <div class="col-sm-2">
-          <button class="btn btn-outline-secondary btn-block" type="reset">Reset</button>
+          <input class="btn btn-outline-secondary btn-block" type="reset" value="Reset" name="reset" form="personinfo">
+<!--             Reset
+          </button> -->
         </div>
       </div>
     </form>
