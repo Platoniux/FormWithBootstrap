@@ -10,7 +10,7 @@
 <body class="bg-light">
   <div class="row justify-content-center no-gutters py-5">
     <div class="col-1 text-right pr-1">
-      <span class="fas fa-info-circle fa-3x">
+      <span class="fas fa-info-circle fa-3x" data-container="body" data-toggle="popover" data-placement="top" data-content="You are the best of the best ;)">
       </span>
     </div>
     <div class="col-auto">
@@ -20,13 +20,11 @@
     </div>
   </div>
   <div class="container">
-    <form action="https://mate-academy-form-lesson.herokuapp.com/create-application" method="post" name="personinfo">
+    <form action="https://mate-academy-form-lesson.herokuapp.com/create-application" method="post" id="personinfo">
       <div class="row">
         <fieldset class="col-lg-8"> 
           <legend>
-            <h4>
-              Personal Information
-            </h4>
+            Personal Information
           </legend>
           <div class="row">
             <div class="col-lg-6">
@@ -34,7 +32,7 @@
                 <label for="surname">
                   Surname: 
                 </label>
-                <input class="form-control" id="surname" type="text" name="surname" form="personinfo" autocomplete="off" required>
+                <input class="form-control" id="surname" type="text" name="surname" form="personinfo" autocomplete="off" required data-toggle="popover">
               </div>
             </div>
             <div class="col-lg-6">
@@ -77,9 +75,7 @@
         </fieldset>
         <fieldset class="col-lg-4"> 
           <legend>
-            <h4>
               Registration
-            </h4>
           </legend>
           <div class="form-group">
             <label for="email">
@@ -104,9 +100,7 @@
         <div class="col">
           <fieldset class="form-group">
             <legend>
-              <h4>
                 An interesting fact about you
-              </h4>
             </legend>
             <div class="row">
               <div class="col-lg">
@@ -169,7 +163,7 @@
                   <label for="rate">
                     How do you rate our work?
                   </label>
-                  <input class="form-control" id='rate' type="range" name="rate" form="personinfo">
+                  <input class="custom-range" id='rate' type="range" name="rate" form="personinfo">
                 </div>
               </div>
             </div>
@@ -180,9 +174,7 @@
         <div class="col-sm-6 offset-sm-3 offset-lg-2">
           <fieldset class="form-group">
             <legend>
-              <h6>
                 Your comments
-              </h6>
             </legend>
             <textarea class="form-control" name="comments" placeholder="Comments"></textarea>
           </fieldset>
@@ -194,5 +186,14 @@
       </div>
     </form>
   </div>
+<!-- Botstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script>
+  	$(function () {
+  		$('[data-toggle="popover"]').popover()
+  	})
+  </script>
 </body>
 </html>
